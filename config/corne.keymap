@@ -17,6 +17,19 @@
         };
     };
 
+    behaviors {
+        hm_l: hm_l {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HM_L";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <250>;
+            flavor = "tap-preferred";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -29,10 +42,10 @@
             //                              |  GUI  | ENT | LWR |         | RSE | SPC  | ESC |
 
             bindings = <
-&trans  &trans       &kp L   &kp G   &kp D     &trans         &trans    &kp H               &kp U   &kp O   &trans  &trans
-&trans  &mt LCTRL I  &kp S   &kp R   &kp T     &trans         &trans    &kp N               &kp E   &kp A   &kp C   &trans
-&trans  &trans       &trans  &trans  &trans    &trans         &trans    &trans              &trans  &trans  &trans  &trans
-                             &trans  &kp LGUI  &key_repeat    &alpha_2  &mt LC(LGUI) SPACE  &trans
+&trans  &trans         &kp L   &kp G   &kp D     &trans         &trans    &kp H                         &kp U   &kp O   &trans  &trans
+&trans  &hm_l LCTRL I  &kp S   &kp R   &kp T     &trans         &trans    &kp N                         &kp E   &kp A   &kp C   &trans
+&trans  &trans         &trans  &trans  &trans    &trans         &trans    &trans                        &trans  &trans  &trans  &trans
+                               &trans  &kp LGUI  &key_repeat    &alpha_2  &hm_l LC(LEFT_COMMAND) SPACE  &trans
             >;
         };
 
