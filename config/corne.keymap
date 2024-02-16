@@ -42,10 +42,10 @@
             //                              |  GUI  | ENT | LWR |         | RSE | SPC  | ESC |
 
             bindings = <
-&trans  &trans         &kp L   &kp G   &kp D     &trans         &trans    &kp H                         &kp U   &kp O   &trans  &trans
-&trans  &hm_l LCTRL I  &kp S   &kp R   &kp T     &trans         &trans    &kp N                         &kp E   &kp A   &kp C   &trans
-&trans  &trans         &trans  &trans  &trans    &trans         &trans    &trans                        &trans  &trans  &trans  &trans
-                               &trans  &kp LGUI  &key_repeat    &alpha_2  &hm_l LC(LEFT_COMMAND) SPACE  &trans
+&trans  &hm_l LCTRL I       &kp S   &kp R         &kp T        &trans         &trans    &kp N                         &kp E     &kp A   &kp C    &trans
+&trans  &hm_l LCTRL ESCAPE  &kp L   &kp G         &kp D        &trans         &trans    &kp H                         &kp U     &kp O   &kp DEL  &trans
+&trans  &trans              &trans  &kp LEFT_GUI  &key_repeat  &trans         &trans    &hm_l LC(LS(LEFT_GUI)) SPACE  &alpha_2  &trans  &trans   &trans
+                                    &trans        &trans       &key_repeat    &alpha_2  &trans                        &trans
             >;
         };
 
