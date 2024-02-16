@@ -42,17 +42,17 @@
             //                              |  GUI  | ENT | LWR |         | RSE | SPC  | ESC |
 
             bindings = <
-&trans  &hm_l LCTRL I       &kp S   &kp R         &kp T        &trans         &trans    &kp N                         &kp E     &kp A   &kp C    &trans
-&trans  &hm_l LCTRL ESCAPE  &kp L   &kp G         &kp D        &trans         &trans    &kp H                         &kp U     &kp O   &kp DEL  &trans
-&trans  &trans              &trans  &kp LEFT_GUI  &key_repeat  &trans         &trans    &hm_l LC(LS(LEFT_GUI)) SPACE  &alpha_2  &trans  &trans   &trans
+&trans  &hm_l LCTRL I       &kp S   &kp R         &kp T        &trans         &trans    &kp N                         &kp E     &kp A   &kp C          &trans
+&trans  &hm_l LCTRL ESCAPE  &kp L   &kp G         &kp D        &trans         &trans    &kp H                         &kp U     &kp O   &kp BACKSPACE  &trans
+&trans  &trans              &trans  &kp LEFT_GUI  &key_repeat  &trans         &trans    &hm_l LC(LS(LEFT_GUI)) SPACE  &alpha_2  &trans  &trans         &trans
                                     &trans        &trans       &key_repeat    &alpha_2  &trans                        &trans
             >;
         };
 
         ALPHA_2 {
             bindings = <
-&trans  &trans  &kp V   &kp W   &kp M           &trans    &trans  &kp F   &kp COMMA   &kp Z   &trans  &trans
-&trans  &kp Q   &kp J   &kp P   &kp K           &trans    &trans  &kp B   &kp PERIOD  &kp X   &kp Y   &trans
+&trans  &kp Q   &kp J   &kp P   &kp K           &trans    &trans  &kp B   &kp COMMA   &kp X   &kp Y   &trans
+&trans  &trans  &kp V   &kp W   &kp M           &trans    &trans  &kp F   &kp PERIOD  &kp Z   &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans    &trans  &trans  &trans      &trans  &trans  &trans
                         &trans  &sk LEFT_SHIFT  &trans    &trans  &trans  &trans
             >;
