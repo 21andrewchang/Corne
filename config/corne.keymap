@@ -68,7 +68,7 @@
                 layer_league {
                         bindings = <
    &kp TAB    &kp N1       &kp N2     &kp N3         &kp N4       &kp N5       &kp CARET &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR  &kp DEL
-   &kp LCTRL  &kp Q        &kp W      &kp E          &kp R        &kp T        &kp N6    &kp N7     &kp N8    &to LEAGUE    &to LEAGUE    &to LEAGUE
+   &kp LCTRL  &kp Q        &kp W      &kp E          &kp R        &kp T        &kp N6    &kp N7     &kp N8    &to LEAGUE    &to LEAGUE    &to 0
    &kp LSHFT  &kp A        &kp S      &kp D          &kp F        &kp G        &kp MINUS &kp EQUAL  &kp BSLH  &kp LBKT  &to LEAGUE  &kp RALT
                                       &kp LALT       &kp SPACE    &mo FKEYS         &trans &kp SPACE &kp ESC
                         >;
