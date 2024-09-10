@@ -7,18 +7,31 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#define LEAGUE 3
+#define FKEYS 4
 
 / {
-        keymap {
+    behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+
+            //Binding for tapping once, twice, etc.     
+            bindings = <&mo 2>, <&kp N2>;
+        };
+    };
+
+    keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {
 // --------------------------------------------------------------------------------------------------
 // |  TAB     |  Q     |  W     |  E    |  R  |  T  |         |  Y  |  U   |  I  |  O  |  P  | BKSP |
 // | CTRL     |  A     |  S     |  D    |  F  |  G  |         |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | LSHFT    |  Z     |  X     |  C    |  V  |  B  |         |  N  |  M   |  ,  |  .  |  /  | ALT  |
 //
 //                              |  GUI  | ENT | LWR |         | RSE | SPC  | ESC |
+                default_layer {
                         bindings = <
    &kp TAB      &kp Q   &kp W   &kp E    &kp R   &kp T       &kp Y   &kp U   &kp I     &kp O   &kp P    &kp BSPC
    &kp LCTRL    &kp A   &kp S   &kp D    &kp F   &kp G       &kp H   &kp J   &kp K     &kp L   &kp SEMI &kp SQT
@@ -27,12 +40,12 @@
                         >;
                 };
 
-                layer_below {
 // -----------------------------------------------------------------------------------------
 // |  TAB | F1  | F2  | F3  | F4  | F5  |   | HOM | PGD | PGU | END |     | DEL  |
 // | CTRL | F6  | F7  | F8  | F9  | F10 |   | LFT | DWN | UP  | RGT |     |  `   |
 // | LSHFT| CAPS|     | PRV | NXT | PP  |   |  _  |  +  |  |  |  {  |  }  | ALT  |
 //                    | GUI | ENT |     |   |     | SPC | ESC |
+                layer_below {
                        bindings = <
    &kp  TAB  &kp F1   &kp F2 &kp F3     &kp F4     &kp F5     &kp HOME  &kp PG_DN   &kp PG_UP &kp END   &trans   &kp DEL
    &kp LCTRL &kp F6   &kp F7 &kp F8     &kp F9     &kp F10    &kp LEFT  &kp DOWN    &kp UP    &kp RIGHT &trans   &kp GRAVE
@@ -41,15 +54,32 @@
                         >;
                 };
 
-                layer_above {
-// ----------------------------------------------------------------------------------------
+
+//----------------------------------------------------------------------------------------
 // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | DEL  |
-// | CTRL |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | ALT  |
+// |   ~  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | LOL  |
 // | LSHFT| DDWN| DUP | VDWN| VUP | VMT |   |  -  |  =  |  \  |  [  |  ]  | ALT  |
 //                    | GUI | ENT |     |   |     | SPC | ESC |
+                layer_above {
                         bindings = <
    &kp TAB    &kp EXCL     &kp AT       &kp HASH     &kp DLLR     &kp PRCNT    &kp CARET &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR  &kp DEL
-   &kp LCTRL  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6    &kp N7     &kp N8    &kp N9    &kp N0    &kp RALT
+   &kp TILDE  &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6    &kp N7     &kp N8    &kp N9    &kp N0    &to LEAGUE 
+   &kp LSHFT  &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP &kp K_MUTE   &kp MINUS &kp EQUAL  &kp BSLH  &kp LBKT  &kp RBKT  &kp RALT
+                                                     &kp LGUI &kp RET &trans   &trans &kp SPACE &kp ESC
+                        >;
+                };
+
+//--LEAGUE---------------------------------------
+//
+// | TAB  |  1  |  2  |  3  |  4  |  5  |    
+// | CTRL |  Q  |  W  |  E  |  R  |  T  |    
+// | LSHFT|  A  |  S  |  D  |  F  |  G  |    
+//                    | ALT |SPACE|FKEYS|   
+
+                layer_league {
+                        bindings = <
+   &kp TAB    &kp N1       &kp N2     &kp N3         &kp DLLR     &kp PRCNT    &kp CARET &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR  &kp DEL
+   &kp TILDE  &kp Q        &kp W      &kp E          &kp R        &kp T        &kp N6    &kp N7     &kp N8    &kp N9    &kp N0    &kp RALT
    &kp LSHFT  &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP &kp K_MUTE   &kp MINUS &kp EQUAL  &kp BSLH  &kp LBKT  &kp RBKT  &kp RALT
                                                      &kp LGUI &kp RET &trans   &trans &kp SPACE &kp ESC
                         >;
