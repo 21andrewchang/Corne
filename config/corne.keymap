@@ -11,17 +11,6 @@
 #define FKEYS 4
 
 / {
-    behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-
-            //Binding for tapping once, twice, etc.     
-            bindings = <&mo 2>, <&kp N2>;
-        };
-    };
-
     keymap {
                 compatible = "zmk,keymap";
 
@@ -79,7 +68,7 @@
                 layer_league {
                         bindings = <
    &kp TAB    &kp N1       &kp N2     &kp N3         &kp DLLR     &kp PRCNT    &kp CARET &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR  &kp DEL
-   &kp TILDE  &kp Q        &kp W      &kp E          &kp R        &kp T        &kp N6    &kp N7     &kp N8    &kp N9    &kp N0    &kp RALT
+   &kp LCTRL  &kp Q        &kp W      &kp E          &kp R        &kp T        &kp N6    &kp N7     &kp N8    &kp N9    &kp N0    &kp RALT
    &kp LSHFT  &kp C_BRI_DN &kp C_BRI_UP &kp C_VOL_DN &kp C_VOL_UP &kp K_MUTE   &kp MINUS &kp EQUAL  &kp BSLH  &kp LBKT  &kp RBKT  &kp RALT
                                                      &kp LGUI &kp RET &trans   &trans &kp SPACE &kp ESC
                         >;
