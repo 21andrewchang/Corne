@@ -6,19 +6,11 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-
+#include <dt-bindings/zmk/bt.h>
 #define LEAGUE 3
 #define FKEYS 4
 
 / {
-    behaviors {
-        hold_tap: hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <800>;
-            bindings = <&kp>, <&kp>;
     keymap {
                 compatible = "zmk,keymap";
 
@@ -89,3 +81,5 @@
                                       &kp LALT       &kp SPACE    &mo FKEYS         &trans &kp SPACE &kp ESC
                         >;
                 };
+        };
+};
