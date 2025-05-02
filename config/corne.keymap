@@ -33,9 +33,9 @@
 //                                                | GUI | ENT |     |   |     | SPC | ESC |
                 layer_above {
                         bindings = <
-   &kp AT       &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6    &kp N7     &kp N8    &kp N9    &kp N0    &kp RET 
-   &kp TAB    &kp EXCL     &kp AT       &kp LBKT     &kp LPAR     &kp          &kp       &kp RPAR   &kp RBKT  &kp  AT     &kp SQT   &kp DEL
-   &kp LSHFT  &kp TILDE    &kp AT       &kp AT       &kp AT       &kp EQUAL  &kp KP_PLUS &kp MINUS  &kp BSLH  &kp  AT      &kp AT      &kp AT
+   &kp AT     &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6    &kp N7     &kp N8    &kp N9    &kp N0    &kp RET 
+   &kp TAB    &kp EXCL     &kp AT       &kp LBKT     &kp LPAR     &kp MINUS    &kp AT    &kp RPAR   &kp RBKT  &kp  AT   &kp SQT   &kp DEL
+   &kp LSHFT  &kp TILDE    &kp AT       &kp AT       &kp AT       &kp KP_PLUS  &kp MINUS &kp EQUAL  &kp BSLH  &kp  AT   &kp AT    &kp AT
                                         &kp LGUI     &kp LSHIFT   &trans       &trans    &kp SPACE  &kp ESC
                         >;
                 };
