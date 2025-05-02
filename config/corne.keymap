@@ -7,8 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#define LEAGUE 3
-#define FKEYS 4
 
 / {
     keymap {
@@ -36,8 +34,8 @@
                 layer_above {
                         bindings = <
    &kp        &kp N1       &kp N2       &kp N3       &kp N4       &kp N5       &kp N6    &kp N7     &kp N8    &kp N9    &kp N0    &kp RET 
-   &kp TAB    &kp EXCL     &kp AT       &kp LBKT     &kp LPAR     &kp          &kp       &kp RPAR   &kp RBKT  &kp       &kp SQT   &kp DEL
-   &kp LSHFT  &kp TILDE    &kp          &kp          &kp          &kp KP_PLUS  &kp MINUS &kp EQUAL  &kp BSLH  &kp       &kp       &kp 
+   &kp TAB    &kp EXCL     &kp AT       &kp LBKT     &kp LPAR     &kp          &kp       &kp RPAR   &kp RBKT  &kp  AT     &kp SQT   &kp DEL
+   &kp LSHFT  &kp TILDE    &kp AT       &kp AT       &kp AT       &kp KP_PLUS  &kp MINUS &kp EQUAL  &kp BSLH  &kp  AT      &kp AT      &kp AT
                                         &kp LGUI     &kp LSHIFT   &trans       &trans    &kp SPACE  &kp ESC
                         >;
                 };
